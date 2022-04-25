@@ -80,9 +80,9 @@ To do this we will use a variable $\text{ptr}$, which will indicate that in the 
 All other vertices in that range are either already removed from the tree, or have still more than one adjacent vertices.
 At the same time we say, that we haven't removed any leaf vertices bigger than $\text{ptr}$ yet.
 
-This variable is already very helpful in the first case.
+This variable is already very helpful in the second case.
 After removing the current leaf node, we know that there cannot be a leaf node between $0$ and $\text{ptr}$, therefore we can start the search for the next one directly at $\text{ptr} + 1$, and we don't have to start the search back at vertex $0$.
-And in the second case, we can further distinguish two cases:
+And in the first case, we can further distinguish two cases:
 Either the newly gained leaf vertex is smaller than $\text{ptr}$, then this must be the next leaf vertex, since we know that there are no other vertices smaller than $\text{ptr}$.
 Or the newly gained leaf vertex is bigger.
 But then we also know that it has to be bigger than $\text{ptr}$, and can start the search again at $\text{ptr} + 1$.
